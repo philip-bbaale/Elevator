@@ -30,5 +30,5 @@ class Operator():
     def work(self):
         print(self.elevator.floors_stopped())
 
-Op = Operator([ (0,0), (0,11), (1,4), (1,11)])
+Op = Operator([("up",0,), ("down",11,), ("go",4), ("go",11)])
 Op.operate()
