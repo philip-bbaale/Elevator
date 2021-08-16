@@ -18,10 +18,10 @@ class Operator():
         locations = []
         for pair in range(len(self.inputs)):
 
-            if self.inputs[pair][0] == 0:
+            if self.inputs[pair][0] == "up" or "down":
                 self.elevator.call_elevator(self.inputs[pair][1])
                 locations.append(self.inputs[pair][1])
-            elif self.inputs[pair][0] == 1:
+            elif self.inputs[pair][0] == "go":
                 self.elevator.go_floor(self.inputs[pair][1])
                 locations.append(self.inputs[pair][1])
                 
