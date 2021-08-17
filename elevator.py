@@ -22,32 +22,30 @@ class Elevator():
   def stop(self):
     print("Opening Doors \n Closing Doors")
 
-  def call_elevator(self, user_call_floor):
+  def car_call_up(self, user_call_floor):
     self.user_call_floor = user_call_floor
+    while self.elevatator_current_floor != self.user_call_floor:
+      self.move_up()
+    else:
+      self.stop()
 
-    if self.user_call_floor > self.elevatator_current_floor:
-      while self.elevatator_current_floor != self.user_call_floor:
-        self.move_up()
-      else:
-        self.stop()
-
-    if self.user_call_floor <= self.elevatator_current_floor:
-      while self.elevatator_current_floor != self.user_call_floor:
-        self.move_down()
-      else:
-        self.stop()
-
-  def go_floor(self, user_go_floor):
+  def car_call_down(self, user_call_floor):
+    self.user_call_floor = user_call_floor
+    while self.elevatator_current_floor != self.user_call_floor:
+      self.move_down()
+    else:
+      self.stop()
+    
+  def car_go_up(self, user_go_floor):
     self.user_go_floor = user_go_floor
+    while self.elevatator_current_floor != self.user_go_floor:
+      self.move_up()
+    else:
+      self.stop()
 
-    if self.user_go_floor > self.elevatator_current_floor:
-      while self.elevatator_current_floor != self.user_go_floor:
-        self.move_up()
-      else:
-        self.stop()
-
-    if self.user_go_floor <= self.elevatator_current_floor:
-      while self.elevatator_current_floor != self.user_go_floor:
-        self.move_down()
-      else:
-        self.stop()
+  def car_go_down(self, user_go_floor):
+    self.user_go_floor = user_go_floor
+    while self.elevatator_current_floor != self.user_go_floor:
+      self.move_down()
+    else:
+      self.stop()
