@@ -17,7 +17,15 @@ class Operator():
             # elif self.inputs[pair][0] == "go":
             #     self.elevator.go_floor(self.inputs[pair][1])
             #     locations.append(self.inputs[pair][1])
-            pass
+
+            if self.inputs[pair][0] == "up":
+                self.elevator.car_call_up(self.inputs[pair][1])
+
+            if self.inputs[pair][0] == "down":
+                self.elevator.car_call_down(self.inputs[pair][1])
+
+            if self.inputs[pair][0] == "go":
+                pass
                 
         print(locations)
 
