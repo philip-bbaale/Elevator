@@ -2,8 +2,10 @@ class Elevator():
   def __init__(self, num_floors):
     self.total_floors = num_floors
     self.car_current_floor = 0
+    self.max_floor = 12
+    self.min_floor = 0
 
-  def car_current_floor(self):
+  def get_car_current_floor(self):
     return self.car_current_floor
 
   def is_at(self):
@@ -20,18 +22,18 @@ class Elevator():
     print("Moving down {}'nd floor".format(self.car_current_floor))
 
   def stop(self):
-    print("Opening Doors \n Closing Doors")
+    print("Opening Doors \n Closing Doors",self.car_current_floor)
 
   def car_call_up(self, user_call_floor):
     self.user_call_floor = user_call_floor
-    while self.car_current_floor != self.user_call_floor:
+    while self.car_current_floor != self.user_call_floor and self.car_current_floor < self.max_floor:
       self.move_up()
     else:
       self.stop()
 
   def car_call_down(self, user_call_floor):
     self.user_call_floor = user_call_floor
-    while self.car_current_floor != self.user_call_floor:
+    while self.car_current_floor != self.user_call_floor and self.car_current_floor > self.min_floor:
       self.move_down()
     else:
       self.stop()
