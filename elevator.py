@@ -1,7 +1,7 @@
 class Elevator():
   def __init__(self, num_floors):
     self.total_floors = num_floors
-    self.car_current_floor = 0
+    self.car_current_floor = 5
     self.max_floor = 12
     self.min_floor = 0
 
