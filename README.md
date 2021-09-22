@@ -50,7 +50,7 @@ You're investigating what the elevator did, given that set of input sequence.
 # Installation and Setup
 >- Clone the repository.
 >- Navigate to the project folder and open it in your most suitable editor.
->- In main.py, under the Operator() class which takes an array of tuples.
+>- In main.py, under the Operator() instance which takes an array of tuples.
 >- For every turple, there are two elements. 
 >- In the first index, the direction the user wants to go "up", "down" or "go" if the user was inside the car.
 >- In the second index, the floor to which the user is calling the car from for "up" or "down" or for which the car to go to for "go".
