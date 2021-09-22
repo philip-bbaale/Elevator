@@ -1,35 +1,35 @@
-#Elevator class/ Instance of the elvator.
 class Elevator():
+  """This class consits of all basic functions of a car"""
   def __init__(self, num_floors):
     self.total_floors = num_floors
     self.elevatator_current_floor = 0
   
-  #Function to get the car's current floor.
   def elevator_current_floor(self):
+    """Returns the car's current floor"""
     return self.elevatator_current_floor
   
-  #Function to print the car's current floor
   def is_at(self):
+    """Prints the car's current floor"""
     print("Currently on {}'nd floor".format(self.elevatator_current_floor))
   
-  #Function to make car move up.
   def move_up(self):
+    """Make car to move up"""
     self.is_at()
     self.elevatator_current_floor = self.elevatator_current_floor + 1
     print("Moving up {}'nd floor".format(self.elevatator_current_floor))
 
-  #Function to make car move down.
   def move_down(self):
+    """Make car to move down"""
     self.is_at()
     self.elevatator_current_floor = self.elevatator_current_floor -1
     print("Moving down {}'nd floor".format(self.elevatator_current_floor))
 
-  #Function to stop car.
   def stop(self):
+    """Make car to stop, open and close doors"""
     print("Opening Doors \n Closing Doors")
   
-  #Function to call car.
   def call_elevator(self, user_call_floor):
+    """Call car to floor"""
     self.user_call_floor = user_call_floor
 
     if self.user_call_floor > self.elevatator_current_floor:
@@ -44,8 +44,8 @@ class Elevator():
       else:
         self.stop()
 
-  #Function to tell car to go to floor.
   def go_floor(self, user_go_floor):
+    """Takes car to specified floor"""
     self.user_go_floor = user_go_floor
 
     if self.user_go_floor > self.elevatator_current_floor:
