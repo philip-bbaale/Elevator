@@ -8,14 +8,6 @@ class Operator():
     def __init__(self,inputs):
         self.inputs = inputs
         self.elevator = Elevator(12)
-
-    # def operate(self):
-    #     for pair in self.inputs:
-    #         print("pait",pair)
-    #         if pair[0] == 0:
-    #             self.elevator.call_elevator(pair[1])
-    #         elif pair[0] == 1:
-    #             self.elevator.go_floor(pair[1])
     
     #Function to run the elevator.
     def operate(self):
