@@ -1,4 +1,4 @@
-#Importin Elevator class to access its functions.
+#Importing Elevator class to access its functions.
 from elevator import Elevator
 
 #Operator class to make use of the Elevator functions.
@@ -48,7 +48,7 @@ class Operator():
                 if self.inputs[pair][1] > self.elevator.car_current_floor:
                     self.elevator.car_go_up(self.inputs[pair][1])
                     locations.append(self.inputs[pair][1])
-                    
+
                 #Run if call operator is on a lower on same floor as car
                 elif self.inputs[pair][1] <= self.elevator.car_current_floor:
                     self.elevator.car_go_down(self.inputs[pair][1])
