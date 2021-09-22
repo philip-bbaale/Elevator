@@ -41,6 +41,12 @@ You're investigating what the elevator did, given that set of input sequence.
 - Every user weighs 10kg.
 - The elevator maximum allowed weight is 100kg.
 
+### Branches
+- Master
+- Develop
+- Algorithm
+- Algorithm2
+
 # Installation and Setup
 >- Clone the repository.
 >- Navigate to the project folder and open it in your most suitable editor.
