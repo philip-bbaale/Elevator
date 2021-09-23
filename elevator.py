@@ -1,5 +1,15 @@
 class Elevator():
-  """This class consits of all basic functions of a car"""
+  """
+  Contains functions of the car.
+
+  Parameters
+  ----------
+  num_floors: int
+  The number of floors the elevator can access.
+
+  elevator_current_floor: int, optional
+  The car's current floor which is "ground floor", "0" by default.
+  """
   def __init__(self, num_floors):
     self.total_floors = num_floors
     self.elevatator_current_floor = 0
