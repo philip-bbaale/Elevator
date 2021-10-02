@@ -1,15 +1,14 @@
-#Importing Elevator class to access its functions.
 from elevator import Elevator
 
 class Operator():
     """
     Contains algorithm to run the functions of the Elevator on the car
     """
-    def __init__(self,inputs):
-        self.inputs = inputs
-        self.elevator = Elevator(12)
+    def __init__(self,floors):
+        self.elevator = Elevator(floors)
     
-    def operate(self):
+    def run(self, inputs):
+        self.inputs = self.inputs
         """Algorithm that operates the elevator car"""
         locations = []
         for pair in range(len(self.inputs)):
@@ -21,8 +20,4 @@ class Operator():
                 self.elevator.go_floor(self.inputs[pair][1])
                 locations.append(self.inputs[pair][1])
                 
-        print(locations)
-    
-    def work(self):
-        """Print floor log on which the car stopped"""
-        print(self.elevator.floors_stopped())
+        return locations
