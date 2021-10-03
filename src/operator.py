@@ -1,4 +1,4 @@
-from elevator import Elevator
+from src.elevator import Elevator
 
 class Operator():
     """
@@ -8,7 +8,7 @@ class Operator():
         self.elevator = Elevator(floors)
     
     def run(self, inputs):
-        self.inputs = self.inputs
+        self.inputs = inputs
         """Algorithm that operates the elevator car"""
         locations = []
         for pair in range(len(self.inputs)):

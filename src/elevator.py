@@ -24,15 +24,11 @@ class Elevator():
   
   def move_up(self):
     """Make car to move up"""
-    self.is_at()
     self.elevatator_current_floor = self.elevatator_current_floor + 1
-    print("Moving up {}'nd floor".format(self.elevatator_current_floor))
 
   def move_down(self):
     """Make car to move down"""
-    self.is_at()
     self.elevatator_current_floor = self.elevatator_current_floor -1
-    print("Moving down {}'nd floor".format(self.elevatator_current_floor))
 
   def stop(self):
     """Make car to stop, open and close doors"""
@@ -55,7 +51,11 @@ class Elevator():
         self.stop()
 
   def go_floor(self, user_go_floor):
-    """Takes car to specified floor"""
+    """
+      Takes car to specified floor
+      user_go_floor: int
+      description: the user's destination floor
+    """
     self.user_go_floor = user_go_floor
 
     if self.user_go_floor > self.elevatator_current_floor:
