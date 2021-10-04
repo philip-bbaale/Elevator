@@ -45,7 +45,7 @@ def look_and_scan(inputs):
                 direction = False
                 up_scheduling.sort()
                 car_current_floor = up_scheduling[-1]
-        #Serve all requets in the down direction if they are less than the elevator car current floor.
+        #Serve all request in the down direction if they are less than the elevator car current floor.
         if direction == False:
             for i in inputs:
                 if i[0] == "go" and i[1] <= car_current_floor:
