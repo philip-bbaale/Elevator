@@ -5,14 +5,14 @@ def look_and_scan(inputs):
     Parameters
     __________
         inputs: List
-            A list of Turples with request direction in the 0 index and floor number in the 1 index.
+            A list of Tuples with request direction in the 0 index and floor number in the 1 index.
     Returns
     _______
         An efficient list of ordered floors the elevator car should follow to operate.    
     """
 
     direction = bool
-    car_cuurent_floor = 0
+    car_current_floor = 0
     number_of_floors = 20
     up_scheduling = []
     down_scheduling = []
@@ -23,7 +23,7 @@ def look_and_scan(inputs):
     elif inputs[0][0] == "down":
         direction = False
     elif inputs[0][0] == "go":
-        if inputs[0][1] > car_cuurent_floor:
+        if inputs[0][1] > car_current_floor:
             direction = True
         else:
             direction = False
@@ -32,34 +32,34 @@ def look_and_scan(inputs):
     
     while len(inputs) > 0:
 
-        #Serve all requests in the up direction if they are greator than the elevator car current floor.
+        #Serve all requests in the up direction if they are greater than the elevator car current floor.
         if direction == True:
             for i in inputs:
-                if i[0] == "go" and i[1] > car_cuurent_floor:
+                if i[0] == "go" and i[1] > car_current_floor:
                     up_scheduling.append(i[1])
                     inputs.remove(i)
-                elif i[0] == "up" and i[1] > car_cuurent_floor:
+                elif i[0] == "up" and i[1] > car_current_floor:
                     up_scheduling.append(i[1])
                     inputs.remove(i)
             else:
                 direction = False
                 up_scheduling.sort()
-                car_cuurent_floor = up_scheduling[-1]
+                car_current_floor = up_scheduling[-1]
         #Serve all requets in the down direction if they are less than the elevator car current floor.
         if direction == False:
             for i in inputs:
-                if i[0] == "go" and i[1] <= car_cuurent_floor:
+                if i[0] == "go" and i[1] <= car_current_floor:
                     down_scheduling.append(i[1])
                     inputs.remove(i)
-                elif i[0] == "down" and i[1] <= car_cuurent_floor:
+                elif i[0] == "down" and i[1] <= car_current_floor:
                     down_scheduling.append(i[1])
                     inputs.remove(i)
             else:
                 direction = True
                 down_scheduling.sort(reverse=True)
-                car_cuurent_floor = down_scheduling[-1]
+                car_current_floor = down_scheduling[-1]
 
-    #Arrange the sequece of floors according to First come First served
+    #Arrange the sequence of floors according to First come First served
     if first_come_direction == True:
         new_disk_scheduling = up_scheduling + down_scheduling
     else:
