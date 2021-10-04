@@ -1,4 +1,15 @@
 def look_and_scan(inputs):
+    """
+    Returns ordered list sequence for elevator to operate
+
+    Parameters
+    __________
+        inputs: List
+            A list of Turples with request direction in the 0 index and floor number in the 1 index.
+    Returns
+    _______
+        An efficient list of ordered floors the elevator car should follow to operate.    
+    """
 
     direction = bool
     car_cuurent_floor = 0
@@ -6,7 +17,7 @@ def look_and_scan(inputs):
     up_scheduling = []
     down_scheduling = []
 
-
+    # Genarate first come first served direction of the car
     if inputs[0][0] == "up":
         direction = True
     elif inputs[0][0] == "down":
@@ -21,6 +32,7 @@ def look_and_scan(inputs):
     
     while len(inputs) > 0:
 
+        #Serve all requests in the up direction if they are greator than the elevator car current floor.
         if direction == True:
             for i in inputs:
                 if i[0] == "go" and i[1] > car_cuurent_floor:
@@ -33,7 +45,7 @@ def look_and_scan(inputs):
                 direction = False
                 up_scheduling.sort()
                 car_cuurent_floor = up_scheduling[-1]
-
+        #Serve all requets in the down direction if they are less than the elevator car current floor.
         if direction == False:
             for i in inputs:
                 if i[0] == "go" and i[1] <= car_cuurent_floor:
@@ -47,6 +59,7 @@ def look_and_scan(inputs):
                 down_scheduling.sort(reverse=True)
                 car_cuurent_floor = down_scheduling[-1]
 
+    #Arrange the sequece of floors according to First come First served
     if first_come_direction == True:
         new_disk_scheduling = up_scheduling + down_scheduling
     else:
