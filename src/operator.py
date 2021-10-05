@@ -1,4 +1,5 @@
 from elevator import Elevator
+from schedule import schedule
 
 class Operator():
     """
@@ -12,35 +13,20 @@ class Operator():
         """Algorithm that operates the elevator car"""
 
         self.inputs = inputs
+        self.schedule = schedule(self.inputs)
         locations = []
 
-        for pair in range(len(self.inputs)):
+        for pair in self.schedule:
 
-            if self.inputs[pair][0] in range(len(self.inputs)) == "up" or "down":
+            if pair[0] == "up" or "down":
+                self.elevator.call_elevator(pair[1])
+                locations.append(pair[1])
+            elif pair[0] == "go":
+                self.elevator.go_floor(pair[1])
+                locations.append(pair[1])
 
-                if self.inputs[pair][0] == "up":
-                    for pair2 in range(pair+1, len(self.inputs)):
-
-                        if self.inputs[pair2][0] == "up":
-                            self.elevator.call_elevator(self.inputs[pair2][1])
-                            locations.append(self.inputs[pair2][1])
-                            del self.inputs[pair2]
-
-                if self.inputs[pair][0] == "down":
-                    for pair2 in range(pair+1, len(self.inputs)):
-
-                        if self.inputs[pair2][0] == "down":
-                            self.elevator.call_elevator(self.inputs[pair2][1])
-                            locations.append(self.inputs[pair2][1])
-                            del self.inputs[pair2]
-
-                self.elevator.call_elevator(self.inputs[pair][1])
-                locations.append(self.inputs[pair][1])
-                del self.inputs[pair]
-
-            elif self.inputs[pair][0] == "go":
-                self.elevator.go_floor(self.inputs[pair][1])
-                locations.append(self.inputs[pair][1])
-                del self.inputs[pair]
+        return locations
+        
+            
+            
                 
-        return(locations)
