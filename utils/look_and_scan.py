@@ -41,10 +41,13 @@ def look_and_scan(inputs):
                 elif i[0] == "up" and i[1] > car_current_floor:
                     up_scheduling.append(i)
                     inputs.remove(i)
+                    
             else:
                 direction = False
-                up_scheduling.sort()
+                up_scheduling.sort(key=lambda x:x[1])
                 car_current_floor = up_scheduling[-1][1]
+            
+
         #Serve all request in the down direction if they are less than the elevator car current floor.
         if direction == False:
             for i in inputs:
@@ -53,12 +56,12 @@ def look_and_scan(inputs):
                     inputs.remove(i)
                 elif i[0] == "down" and i[1] <= car_current_floor:
                     down_scheduling.append(i)
-                    inputs.remove(i)
+                    inputs.remove(i)                    
             else:
                 direction = True
                 down_scheduling.sort(key=lambda x:x[1], reverse=True)
                 car_current_floor = down_scheduling[-1][1]
-
+            
     #Arrange the sequence of floors according to First come First served
     if first_come_direction == True:
         new_disk_scheduling = up_scheduling + down_scheduling
@@ -67,4 +70,4 @@ def look_and_scan(inputs):
 
     return new_disk_scheduling
 
-print(look_and_scan([("down", 5), ("go", 0), ("down", 5), ("up", 11), ("go", 0)]))
+print(look_and_scan([("up",3),("go",12),("up",7),("down",7),("go",7),("down",11),("down",12)]))
