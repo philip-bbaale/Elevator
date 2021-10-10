@@ -13,7 +13,7 @@ class Operator():
         """Algorithm that operates the elevator car"""
 
         self.inputs = inputs
-        self.schedule = schedule(self.inputs)
+        self.schedule = schedule(self.inputs, self.elevator.elevator_current_floor)
         locations = []
 
         for pair in self.schedule:
