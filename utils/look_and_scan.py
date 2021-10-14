@@ -44,14 +44,11 @@ def look_and_scan(inputs):
         return schedule
 
     while inputs:
-        if direction:
-            up_scheduling += update_schedule()
-            direction = not direction
-            car_current_floor = up_scheduling[-1][1]
-        else:
-            down_scheduling +=update_schedule()
-            direction = not direction
-            car_current_floor = down_scheduling[-1][1]
+        current_schedule = up_scheduling if direction else down_scheduling
+        current_schedule += update_schedule()
+        car_current_floor = current_schedule[-1][1]
+        direction = not direction
+
 
     up_scheduling.sort(key=lambda x:x[1])
     down_scheduling.sort(key=lambda x:x[1], reverse=True)
