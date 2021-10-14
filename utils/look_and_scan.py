@@ -11,7 +11,6 @@ def look_and_scan(inputs):
         An efficient list of ordered floors the elevator car should follow to operate.
     """
 
-    car_going_up = bool
     car_current_floor = 0
     up_scheduling = []
     down_scheduling = []
