@@ -17,14 +17,13 @@ def look_and_scan(inputs):
     down_scheduling = []
 
     # Genarate first come first served direction of the car
-
     first_request = inputs[0][0]
-    if first_request == "up":
-        car_going_up = True
-    elif first_request == "down":
-        car_going_up = False
-    elif first_request == "go":
-        car_going_up = True if inputs[0][1] > car_current_floor else False
+    first_request_dest_floor = inputs[0][1]
+
+    #TODO:This will not work if car_current_floor starts at top most floor. Fix it.
+    #Update the function to work regardless of car_current_floor's initial value.
+    #Right now it only works if car_current_floor = 0 at the start
+    car_going_up = first_request == "up" or (first_request == "go" and first_request_dest_floor > car_current_floor)
 
     def update_schedule():
 
