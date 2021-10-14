@@ -11,7 +11,7 @@ def look_and_scan(inputs):
         An efficient list of ordered floors the elevator car should follow to operate.
     """
 
-    direction = bool
+    car_going_up = bool
     car_current_floor = 0
     up_scheduling = []
     down_scheduling = []
@@ -20,19 +20,19 @@ def look_and_scan(inputs):
 
     first_request = inputs[0][0]
     if first_request == "up":
-        direction = True
+        car_going_up = True
     elif first_request == "down":
-        direction = False
+        car_going_up = False
     elif first_request == "go":
-        direction = True if inputs[0][1] > car_current_floor else False
+        car_going_up = True if inputs[0][1] > car_current_floor else False
 
     def update_schedule():
 
         def _same_direction(user_current_floor):
             is_before = user_current_floor > car_current_floor
-            return is_before == direction
+            return is_before == car_going_up
 
-        anti_direction = "down" if direction else "up"
+        anti_direction = "down" if car_going_up else "up"
         schedule = []
 
         for i in inputs:
@@ -44,16 +44,16 @@ def look_and_scan(inputs):
         return schedule
 
     while inputs:
-        current_schedule = up_scheduling if direction else down_scheduling
+        current_schedule = up_scheduling if car_going_up else down_scheduling
         current_schedule += update_schedule()
         car_current_floor = current_schedule[-1][1]
-        direction = not direction
+        car_going_up = not car_going_up
 
 
     up_scheduling.sort(key=lambda x:x[1])
     down_scheduling.sort(key=lambda x:x[1], reverse=True)
 
     final_schedule = up_scheduling + down_scheduling
-    return final_schedule if direction else final_schedule.reverse()
+    return final_schedule if car_going_up else final_schedule.reverse()
 
 print(look_and_scan([("up",3),("go",12),("up",7),("down",7),("go",7),("down",11),("down",12)]))
