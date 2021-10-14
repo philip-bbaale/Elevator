@@ -27,8 +27,8 @@ def look_and_scan(inputs):
     def update_schedule():
 
         def _same_direction(user_current_floor):
-            is_before = user_current_floor > car_current_floor
-            return is_before == car_going_up
+            is_same_dir = user_current_floor > car_current_floor
+            return is_same_dir == car_going_up
 
         anti_direction = "down" if car_going_up else "up"
         schedule = []
