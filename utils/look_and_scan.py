@@ -12,8 +12,8 @@ def look_and_scan(inputs):
     """
 
     car_current_floor = 0
-    up_scheduling = []
-    down_scheduling = []
+    up_schedule = []
+    down_schedule = []
 
     # Genarate first come first served direction of the car
     first_request = inputs[0][0]
@@ -42,16 +42,16 @@ def look_and_scan(inputs):
         return schedule
 
     while inputs:
-        current_schedule = up_scheduling if car_going_up else down_scheduling
+        current_schedule = up_schedule if car_going_up else down_schedule
         current_schedule += update_schedule()
         car_current_floor = current_schedule[-1][1]
         car_going_up = not car_going_up
 
 
-    up_scheduling.sort(key=lambda x:x[1])
-    down_scheduling.sort(key=lambda x:x[1], reverse=True)
+    up_schedule.sort(key=lambda x:x[1])
+    down_schedule.sort(key=lambda x:x[1], reverse=True)
 
-    final_schedule = up_scheduling + down_scheduling
+    final_schedule = up_schedule + down_schedule
     return final_schedule if car_going_up else final_schedule.reverse()
 
 print(look_and_scan([("up",3),("go",12),("up",7),("down",7),("go",7),("down",11),("down",12)]))
