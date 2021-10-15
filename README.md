@@ -41,10 +41,13 @@ You're investigating what the elevator did, given that set of input sequence.
 - Every user weighs 10kg.
 - The elevator maximum allowed weight is 100kg.
 
-# Algorithms
+# Elevator Algorithms
 
 ## Fist Come First Served (FCFS)
 In this Disk Scheduling Algorithm the requests are addressed in the order they arrive in the disk queue.
+
+## Shortest Seek Time First (SSTF)
+In this Disk Scheduling Algorithm the request near the disk arm will get executed first.
 
 # Installation and Setup
 >- Clone the repository.
