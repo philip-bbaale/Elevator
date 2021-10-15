@@ -39,7 +39,13 @@ class Elevator():
     self.elevatator_current_floor = self.elevatator_current_floor + 1
 
   def move_down(self):
-    """Make car to move down"""
+    """
+    This function moves the elevator car down by decrementing the elevator car's current floor by 1.
+
+    Returns
+    -------
+    int: elevator car current floor - 1
+    """
     self.elevatator_current_floor = self.elevatator_current_floor -1
 
   def stop(self):
