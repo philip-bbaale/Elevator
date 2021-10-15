@@ -4,6 +4,20 @@ from src.elevator import Elevator
 E = Elevator(20)
 
 def test_elevator_goes_to_destination_floor():
+    """
+    This function tests that the elevator car requested floor to go is same as the elevator current floor after operating.
+
+    Parameters:
+    int
+        Floor number for elevator car to go to.
+
+    Return
+    ------
+    True
+        If the elevator car current floor is the same as the elevator car floor to go to after operating.
+    False
+        If the elevator car current floor is not the same as the elevator car floor to go to after operating.
+    """
     E.go_floor(10)
     assert E.elevator_current_floor() == 10
     
