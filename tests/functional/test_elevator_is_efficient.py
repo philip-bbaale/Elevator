@@ -5,6 +5,19 @@ Op = Operator(50)
 
 
 def test_case_1():
+    """
+    This function tests that the Elevator returns the order of the expected floors it will stop at while operating.
+
+    Variables
+    ---------
+    b: list
+        A sequence of requests made to the elevator car.
+
+    Functions
+    ---------
+    run()
+        This function calls the Elevator functions on the elevator car.
+    """
     b = [("up",3),("go",12),("up",7),("down",7)]
     assert Op.run(b) == [3, 12, 7, 7]
 
