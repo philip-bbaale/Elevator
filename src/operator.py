@@ -15,6 +15,7 @@ class Operator():
     def run(self, inputs):
         """
         This function contains the algorithm to call the Elevator functions on the elevator car
+        The algorithm checks the request type on the elevator car ie: up, down, or go and makes the respective Elevator function call.
 
         Parameters
         ----------
