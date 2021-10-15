@@ -49,7 +49,7 @@ In this Disk Scheduling Algorithm, the requests are addressed in the order they 
 ## Shortest Seek Time First (SSTF)
 In this Disk Scheduling Algorithm, the request near the disk arm will get executed first.
 
-## The SCAN Algorithm
+## SCAN
 In this Disk Scheduling Algorithm, the disk arm moves into a particular direction and services the requests coming in its path and after reaching the end of disk, it reverses its direction and again services the request arriving in its path.
 
 ## LOOK
