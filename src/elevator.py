@@ -27,6 +27,10 @@ class Elevator():
   def is_at(self):
     #Prints the car's current floor
     print("Currently on {}'nd floor".format(self.elevatator_current_floor))
+
+  def stop(self):
+    """This function prints "Opening Doors" and "Closing doors" to signal the elevator car stoping at a floor."""
+    print("Opening Doors \n Closing Doors")
   
   def move_up(self):
     """
@@ -47,10 +51,6 @@ class Elevator():
     int: elevator car current floor - 1
     """
     self.elevatator_current_floor = self.elevatator_current_floor -1
-
-  def stop(self):
-    """Make car to stop, open and close doors"""
-    print("Opening Doors \n Closing Doors")
   
   def call_elevator(self, user_call_floor):
     """Call car to floor"""
