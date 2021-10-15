@@ -1,6 +1,6 @@
 from src.elevator import Elevator
 
-
+#Creating an instance of an operator
 E = Elevator(20)
 
 def test_elevator_goes_to_destination_floor():
