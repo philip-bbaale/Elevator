@@ -21,6 +21,18 @@ def test_elevator_goes_to_destination_floor():
     
 
 def test_elevator_does_not_go_to_invalid_floor():
+    """
+    This function tests that the elevator car requested floor to go is not the same as the elevator current floor after operating.
+
+    Parameters:
+    int
+        Floor number for elevator car to go to.
+
+    Return
+    ------
+    True
+        If the elevator car current floor is not the same as the elevator car floor to go to after operating.
+    """
     E.go_floor(-200)
     assert E.elevator_current_floor() == -200
 
