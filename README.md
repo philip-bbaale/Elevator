@@ -69,6 +69,9 @@ In this Disk Scheduling Algorithm, the disk arm moves into a particular directio
 >- In the second index, the floor to which the user is calling the car from for "up" or "down" or for which the car to go to for "go".
 >- Run the main.py file.
 
+# Known Issues/Blockers
+- High space complexity for sorting algorithm.
+
 # Author(s) information: 
 > Namugera Bbaale Philip
 
