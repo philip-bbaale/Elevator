@@ -49,6 +49,9 @@ In this Disk Scheduling Algorithm the requests are addressed in the order they a
 ## Shortest Seek Time First (SSTF)
 In this Disk Scheduling Algorithm the request near the disk arm will get executed first.
 
+## The SCAN Algorithm
+In this Disk Scheduling Algorithm the disk arm moves into a particular direction and services the requests coming in its path and after reaching the end of disk, it reverses its direction and again services the request arriving in its path.
+
 # Installation and Setup
 >- Clone the repository.
 >- Navigate to the project folder and open it in your most suitable editor.
