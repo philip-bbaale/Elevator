@@ -2,14 +2,33 @@ from src.elevator import Elevator
 
 class Operator():
     """
-    Contains algorithm to run the functions of the Elevator on the car
+    This class contains algorithm to run the functions of the Elevator on the elevator car.
+
+    Parameters
+    ----------
+    floors: int
+        The number of floors the elevator can access.
     """
     def __init__(self,floors):
         self.elevator = Elevator(floors)
     
     def run(self, inputs):
+        """
+        This function contains the algorithm to call the Elevator functions on the elevator car
+        The algorithm checks the request type on the elevator car ie: up, down, or go and makes the respective Elevator function call.
+
+        Parameters
+        ----------
+        inputs: int
+            A sequence of requests made to the elevator car.
+
+        Returns
+        -------
+        locations: int
+            A list of all the floors the elevator car stopped at while operating. 
+        """
         self.inputs = inputs
-        """Algorithm that operates the elevator car"""
+        
         locations = []
         for pair in range(len(self.inputs)):
 
