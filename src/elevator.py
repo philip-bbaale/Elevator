@@ -25,7 +25,7 @@ class Elevator():
     return self.elevatator_current_floor
   
   def is_at(self):
-    #Prints the car's current floor
+    """This function prints the elevator car's current floor"""
     print("Currently on {}'nd floor".format(self.elevatator_current_floor))
 
   def stop(self):
