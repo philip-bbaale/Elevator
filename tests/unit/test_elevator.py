@@ -15,8 +15,6 @@ def test_elevator_goes_to_destination_floor():
     ------
     True
         If the elevator car current floor is the same as the elevator car floor to go to after operating.
-    False
-        If the elevator car current floor is not the same as the elevator car floor to go to after operating.
     """
     E.go_floor(10)
     assert E.elevator_current_floor() == 10
