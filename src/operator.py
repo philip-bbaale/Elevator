@@ -13,8 +13,21 @@ class Operator():
         self.elevator = Elevator(floors)
     
     def run(self, inputs):
+        """
+        This function contains the algorithm to call the Elevator functions on the elevator car
+
+        Parameters
+        ----------
+        inputs: int
+            A sequence of requests made to the elevator car.
+
+        Returns
+        -------
+        locations: int
+            A list of all the floors the elevator car stopped at while operating. 
+        """
         self.inputs = inputs
-        """Algorithm that operates the elevator car"""
+        
         locations = []
         for pair in range(len(self.inputs)):
 
