@@ -15,7 +15,13 @@ class Elevator():
     self.elevatator_current_floor = 0
   
   def elevator_current_floor(self):
-    """Returns the car's current floor"""
+    """
+    Returns the car's current floor
+    
+    Returns
+    -------
+    int: the current floor the elevator car is at.
+    """
     return self.elevatator_current_floor
   
   def is_at(self):
