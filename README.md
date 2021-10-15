@@ -44,13 +44,13 @@ You're investigating what the elevator did, given that set of input sequence.
 # Elevator Algorithms
 
 ## Fist Come First Served (FCFS)
-In this Disk Scheduling Algorithm the requests are addressed in the order they arrive in the disk queue.
+In this Disk Scheduling Algorithm, the requests are addressed in the order they arrive in the disk queue.
 
 ## Shortest Seek Time First (SSTF)
-In this Disk Scheduling Algorithm the request near the disk arm will get executed first.
+In this Disk Scheduling Algorithm, the request near the disk arm will get executed first.
 
 ## The SCAN Algorithm
-In this Disk Scheduling Algorithm the disk arm moves into a particular direction and services the requests coming in its path and after reaching the end of disk, it reverses its direction and again services the request arriving in its path.
+In this Disk Scheduling Algorithm, the disk arm moves into a particular direction and services the requests coming in its path and after reaching the end of disk, it reverses its direction and again services the request arriving in its path.
 
 # Installation and Setup
 >- Clone the repository.
