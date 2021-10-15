@@ -55,6 +55,11 @@ In this Disk Scheduling Algorithm, the disk arm moves into a particular directio
 ## LOOK
 In this Disk Scheduling Algorithm, the disk arm moves into a particular direction and services the requests coming in its path and after reaching the end of disk goes to the last request to be serviced in front of the head and then reverses its direction from there only.
 
+# Algorithms implemented
+- FCFS
+- SSTF
+- SCAN
+
 # Installation and Setup
 >- Clone the repository.
 >- Navigate to the project folder and open it in your most suitable editor.
