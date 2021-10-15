@@ -22,6 +22,19 @@ def test_case_1():
     assert Op.run(b) == [3, 12, 7, 7]
 
 def test_case_2():
+    """
+    This function tests that the Elevator returns the order of the expected floors it will stop at while operating.
+
+    Variables
+    ---------
+    a: list
+        A sequence of requests made to the elevator car.
+
+    Functions
+    ---------
+    run()
+        This function calls the Elevator functions on the elevator car.
+    """
     assert Op.elevator.elevator_current_floor() == 7
 
     a = [("up",3),("go",12),("up",7),("down",7),("go",7),("down",11),("down",12)]
