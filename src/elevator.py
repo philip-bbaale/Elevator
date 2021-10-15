@@ -1,6 +1,6 @@
 class Elevator():
   """
-  Contains functions of the car.
+  This Class contains functions of the elevator car.
 
   Parameters
   ----------
@@ -53,7 +53,18 @@ class Elevator():
     self.elevator_current_floor = self.elevator_current_floor -1
   
   def call_elevator(self, user_call_floor):
-    """Call car to floor"""
+    """
+    This function calls the elevator car to a requested floor.
+
+    Parameters
+    ----------
+    user_call_floor: int
+      The floor number from which the user calls the elevator car.
+
+    Returns
+    -------
+    This function checks if the user_call_floor is higher or lower than the elevator car's current floor and calls the move_up or move_down function respectively until the user_call_floor and the elevator_current_floor are the same.
+    """
     self.user_call_floor = user_call_floor
 
     if self.user_call_floor > self.elevator_current_floor:
