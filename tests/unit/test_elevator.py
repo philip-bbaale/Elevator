@@ -16,5 +16,3 @@ def test_elevator_does_not_go_to_invalid_floor():
 
 def test_elevator_does_not_move_when_weight_limit_is_exceeded_and_alerts_user():
     pass
-
-def test_
