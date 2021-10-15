@@ -60,6 +60,11 @@ In this Disk Scheduling Algorithm, the disk arm moves into a particular directio
 - SSTF
 - SCAN
 
+## How Algorithms were implemented
+>- The first request sets the direction of the elevator car. (FCFS)
+>- Requests closer to the elevator car in the direction it is going are then served. (SSTF)
+>- After serving all requests in a particular direction, the elevator car changes direction and starts afresh.
+
 # Installation and Setup
 >- Clone the repository.
 >- Navigate to the project folder and open it in your most suitable editor.
