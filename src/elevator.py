@@ -29,7 +29,13 @@ class Elevator():
     print("Currently on {}'nd floor".format(self.elevatator_current_floor))
   
   def move_up(self):
-    """Make car to move up"""
+    """
+    This function moves the elevator car up by incrementing the elevator car's current floor by 1.
+
+    Returns
+    -------
+    int: elevator car current floor + 1
+    """
     self.elevatator_current_floor = self.elevatator_current_floor + 1
 
   def move_down(self):
