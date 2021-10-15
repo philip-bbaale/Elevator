@@ -41,11 +41,29 @@ You're investigating what the elevator did, given that set of input sequence.
 - Every user weighs 10kg.
 - The elevator maximum allowed weight is 100kg.
 
-### Branches
-- Master
-- Develop
-- Algorithm
-- Algorithm2
+# Elevator Algorithms
+
+## Fist Come First Served (FCFS)
+In this Disk Scheduling Algorithm, the requests are addressed in the order they arrive in the disk queue.
+
+## Shortest Seek Time First (SSTF)
+In this Disk Scheduling Algorithm, the request near the disk arm will get executed first.
+
+## SCAN
+In this Disk Scheduling Algorithm, the disk arm moves into a particular direction and services the requests coming in its path and after reaching the end of disk, it reverses its direction and again services the request arriving in its path.
+
+## LOOK
+In this Disk Scheduling Algorithm, the disk arm moves into a particular direction and services the requests coming in its path and after reaching the end of disk goes to the last request to be serviced in front of the head and then reverses its direction from there only.
+
+# Algorithms implemented
+- FCFS
+- SSTF
+- SCAN
+
+## How Algorithms were implemented
+>- The first request sets the direction of the elevator car. (FCFS)
+>- Requests closer to the elevator car in the direction it is going are then served. (SSTF)
+>- After serving all requests in a particular direction, the elevator car changes direction and starts afresh.
 
 # Installation and Setup
 >- Clone the repository.
@@ -55,6 +73,9 @@ You're investigating what the elevator did, given that set of input sequence.
 >- In the first index, the direction the user wants to go "up", "down" or "go" if the user was inside the car.
 >- In the second index, the floor to which the user is calling the car from for "up" or "down" or for which the car to go to for "go".
 >- Run the main.py file.
+
+# Known Issues/Blockers
+- High space complexity for sorting algorithm.
 
 # Author(s) information: 
 > Namugera Bbaale Philip
