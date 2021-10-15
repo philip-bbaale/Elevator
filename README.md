@@ -52,6 +52,9 @@ In this Disk Scheduling Algorithm, the request near the disk arm will get execut
 ## The SCAN Algorithm
 In this Disk Scheduling Algorithm, the disk arm moves into a particular direction and services the requests coming in its path and after reaching the end of disk, it reverses its direction and again services the request arriving in its path.
 
+## LOOK
+In this Disk Scheduling Algorithm, the disk arm moves into a particular direction and services the requests coming in its path and after reaching the end of disk goes to the last request to be serviced in front of the head and then reverses its direction from there only.
+
 # Installation and Setup
 >- Clone the repository.
 >- Navigate to the project folder and open it in your most suitable editor.
