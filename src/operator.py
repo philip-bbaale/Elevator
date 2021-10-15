@@ -2,7 +2,12 @@ from src.elevator import Elevator
 
 class Operator():
     """
-    Contains algorithm to run the functions of the Elevator on the car
+    This class contains algorithm to run the functions of the Elevator on the elevator car.
+
+    Parameters
+    ----------
+    floors: int
+        The number of floors the elevator can access.
     """
     def __init__(self,floors):
         self.elevator = Elevator(floors)
