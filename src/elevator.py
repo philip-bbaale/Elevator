@@ -81,9 +81,16 @@ class Elevator():
 
   def go_floor(self, user_go_floor):
     """
-      Takes car to specified floor
+      This function takes the elevator car to a requested floor.
+
+      Parameters
+      ----------
       user_go_floor: int
-      description: the user's destination floor
+        The floor number the user wants to go to.
+
+      Return
+      ------
+      This function checks if the user_call_floor is higher or lower than the elevator car's current floor and calls the move_up or move_down function respectively until the user_call_floor and the elevator_current_floor are the same.
     """
     self.user_go_floor = user_go_floor
 
