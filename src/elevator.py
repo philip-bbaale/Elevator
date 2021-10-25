@@ -10,23 +10,23 @@ class Elevator():
   """
   def __init__(self, num_floors):
     self.total_floors = num_floors
-    self.elevatator_current_floor = 0
+    self.elevator_current_floor = 0
   
   def elevator_current_floor(self):
     """Returns the car's current floor"""
-    return self.elevatator_current_floor
+    return self.elevator_current_floor
   
   def is_at(self):
     """Prints the car's current floor"""
-    print("Currently on {}'nd floor".format(self.elevatator_current_floor))
+    print("Currently on {}'nd floor".format(self.elevator_current_floor))
   
   def move_up(self):
     """Make car to move up"""
-    self.elevatator_current_floor = self.elevatator_current_floor + 1
+    self.elevator_current_floor = self.elevator_current_floor + 1
 
   def move_down(self):
     """Make car to move down"""
-    self.elevatator_current_floor = self.elevatator_current_floor -1
+    self.elevator_current_floor = self.elevator_current_floor -1
 
   def stop(self):
     """Make car to stop, open and close doors"""
@@ -36,14 +36,14 @@ class Elevator():
     """Call car to floor"""
     self.user_call_floor = user_call_floor
 
-    if self.user_call_floor > self.elevatator_current_floor:
-      while self.elevatator_current_floor != self.user_call_floor:
+    if self.user_call_floor > self.elevator_current_floor:
+      while self.elevator_current_floor != self.user_call_floor:
         self.move_up()
       else:
         self.stop()
 
-    if self.user_call_floor <= self.elevatator_current_floor:
-      while self.elevatator_current_floor != self.user_call_floor:
+    if self.user_call_floor <= self.elevator_current_floor:
+      while self.elevator_current_floor != self.user_call_floor:
         self.move_down()
       else:
         self.stop()
@@ -56,14 +56,14 @@ class Elevator():
     """
     self.user_go_floor = user_go_floor
 
-    if self.user_go_floor > self.elevatator_current_floor:
-      while self.elevatator_current_floor != self.user_go_floor:
+    if self.user_go_floor > self.elevator_current_floor:
+      while self.elevator_current_floor != self.user_go_floor:
         self.move_up()
       else:
         self.stop()
 
-    if self.user_go_floor <= self.elevatator_current_floor:
-      while self.elevatator_current_floor != self.user_go_floor:
+    if self.user_go_floor <= self.elevator_current_floor:
+      while self.elevator_current_floor != self.user_go_floor:
         self.move_down()
       else:
         self.stop()
