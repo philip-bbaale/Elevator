@@ -1,5 +1,16 @@
 def schedule(inputs, elevator_current_floor):
 
+    """
+    Returns ordered list sequence for elevator to operate.
+    Parameters
+    __________
+        inputs: List
+            A list of Tuples with request direction in the 0 index and floor number in the 1 index.
+    Returns
+    _______
+        An efficient list of ordered floors the elevator car should follow to operate.
+    """
+
     direction = bool
     up_scheduling = []
     down_scheduling = []
