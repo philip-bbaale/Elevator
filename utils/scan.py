@@ -1,6 +1,6 @@
 def scan(inputs):
     """
-    Returns ordered list sequence for elevator to operate
+    Returns ordered list sequence for elevator to operate.
 
     Parameters
     __________
