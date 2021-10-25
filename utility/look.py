@@ -53,4 +53,4 @@ def look(inputs):
     final_schedule = up_schedule + down_schedule
     return final_schedule if car_going_up else final_schedule.reverse()
 
-print(scan([("up",3),("go",12),("up",7),("down",7),("go",7),("down",11),("down",12)]))
+print(look([("up",3),("go",12),("up",7),("down",7),("go",7),("down",11),("down",12)]))
