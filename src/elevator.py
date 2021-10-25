@@ -1,12 +1,10 @@
 class Elevator():
   """
   Contains functions of the car.
-
   Parameters
   ----------
   num_floors: int
   The number of floors the elevator can access.
-
   elevator_current_floor: int, optional
   The car's current floor which is "ground floor", "0" by default.
   """
