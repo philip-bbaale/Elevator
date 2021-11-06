@@ -1,3 +1,5 @@
+import random
+
 def look(inputs):
     """
     Returns ordered list sequence for elevator to operate.
@@ -10,7 +12,7 @@ def look(inputs):
         An efficient list of ordered floors the elevator car should follow to operate.
     """
 
-    car_current_floor = 0
+    car_current_floor = random.randint(0, 20)
     up_schedule = []
     down_schedule = []
 
