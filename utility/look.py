@@ -15,10 +15,11 @@ def look(inputs):
     car_current_floor = random.randint(0, 20)
     up_schedule = []
     down_schedule = []
+    requests = inputs.copy()
 
     # Genarate first come first served direction of the car
-    first_request = inputs[0][0]
-    first_request_dest_floor = inputs[0][1]
+    first_request = requests[0][0]
+    first_request_dest_floor = requests[0][1]
 
     #TODO:This will not work if car_current_floor starts at top most floor. Fix it.
     #Update the function to work regardless of car_current_floor's initial value.
@@ -34,15 +35,15 @@ def look(inputs):
         anti_direction = "down" if car_going_up else "up"
         schedule = []
 
-        for i in inputs:
+        for i in requests:
             user_req = i[0]
             user_curr_floor = i[1]
             if user_req != anti_direction and _same_direction(user_curr_floor):
                 schedule.append(i)
-                inputs.remove(i)
+                requests.remove(i)
         return schedule
 
-    while inputs:
+    while requests:
         current_schedule = up_schedule if car_going_up else down_schedule
         current_schedule += update_schedule()
         car_current_floor = current_schedule[-1][1]
